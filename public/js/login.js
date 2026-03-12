@@ -19,7 +19,7 @@ if (form_login) {
 
         // DECLARATION DE LA REPONSE POUR RECUPERER LE TOKEN AU FORMAT JSON ET STOCKER DANS LE LOCAL STORAGE
         try {
-            const res = await fetch("http://localhost:3000/users/login", {
+            const res = await fetch("users/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data)

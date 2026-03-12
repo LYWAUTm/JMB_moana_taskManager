@@ -17,7 +17,7 @@ if (form_list) {
         console.log("données envoyées :", data);
 
         try {
-            const res = await fetch("http://localhost:3000/tasks/create", {
+            const res = await fetch("tasks/create", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -24,33 +24,33 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "http://localhost:3001",
     credentials: true,
   })
 );
 
 // ----------------- Helmet (CSP corrigé) ---------------------------------
 
-app.use(
-  helmet({
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: ["'self'"],
-        imgSrc: ["'self'", "data:"],
-        scriptSrc: ["'self'", "https://cdn.jsdelivr.net"],
-        styleSrc: ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net"],
-        connectSrc: ["'self'", "http://localhost:3000"],
-        fontSrc: ["'self'", "data:"],
-        objectSrc: ["'none'"],
-        baseUri: ["'self'"],
-        formAction: ["'self'"],
-        frameAncestors: ["'none'"],
-      },
-    },
-    crossOriginEmbedderPolicy: false,
-    crossOriginResourcePolicy: { policy: "cross-origin" },
-  })
-);
+// app.use(
+//   helmet({
+//     contentSecurityPolicy: {
+//       directives: {
+//         defaultSrc: ["'self'"],
+//         imgSrc: ["'self'", "data:"],
+//         scriptSrc: ["'self'", "https://cdn.jsdelivr.net"],
+//         styleSrc: ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net"],
+//         connectSrc: ["'self'", "http://localhost:3000"],
+//         fontSrc: ["'self'", "data:"],
+//         objectSrc: ["'none'"],
+//         baseUri: ["'self'"],
+//         formAction: ["'self'"],
+//         frameAncestors: ["'none'"],
+//       },
+//     },
+//     crossOriginEmbedderPolicy: false,
+//     crossOriginResourcePolicy: { policy: "cross-origin" },
+//   })
+// );
 
 // ----------------- Middlewares globaux ---------------------------------
 
@@ -80,7 +80,7 @@ app.get("/list", (_req, res) => {
 
 // ----------------- Démarrage serveur ------------------------------------
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Serveur lancé sur http://localhost:${PORT}`);
 });

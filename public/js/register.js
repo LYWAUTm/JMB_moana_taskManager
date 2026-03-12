@@ -21,7 +21,7 @@ if (form_register) {
 
         // DECLARATION DE LA REPONSE AU FORMAT JSON 
         try {
-            const res = await fetch("http://localhost:3000/users/register", {
+            const res = await fetch("users/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
