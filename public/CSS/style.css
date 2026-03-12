@@ -1,0 +1,56 @@
+/* ==================================================================== */
+/*                          VARIABLES CSS                             */
+/* ==================================================================== */
+
+                      /* PALETTE REUTILISABLE */
+:root {
+                        /* COULEURS */
+    --bg-main: cadetblue;   /* Bleu cadet */
+    --bg-box: #c2bdbd;      /* Gris clair */
+    --text-dark: #222;      /* Noir */
+    --primary: #0d6efd;     /* Bleu primaire */
+
+                       /* ESPACEMENT */
+    --space-s: 0.5rem;        /* small */
+    --space-m: 1rem;          /* medium */
+    --space-l: 2rem;          /* large */
+}
+
+
+                        /* GLOBAL */
+body {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    margin: var(--space-m);
+}
+
+
+                       /* HEADER */
+.titre_1 {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-s);
+    background-color: var(--bg-box);
+    border-radius: 20px;
+    margin: var(--space-m);
+}
+
+
+                        /* LAYOUT */
+
+
+
+/* BOX (FORMULAIRES / SECTIONS) */
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-l);
+    padding: var(--space-l);
+    background-color: var(--bg-box);
+    border-radius: 20px;
+    width: 100%;
+    max-width: none;
+    margin-top: var(--space-l);
+}
